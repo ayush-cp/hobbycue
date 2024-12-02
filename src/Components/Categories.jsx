@@ -44,7 +44,7 @@ const Categories = () => {
     <div className="w-full min-h-[51.125rem] h-max bg-white grid place-items-center md:py-1 py-8">
       <div className="md:w-[86%] w-full min-h-[75%] h-max grid md:grid-cols-2 place-items-center grid-cols-1 gap-6">
         {categores.map((category) => (
-          <div className="w-[94%] md:h-full h-[216px] border border-[#CED4DA] flex flex-col md:items-start items-center md:gap-6 gap-5 md:p-11 p-6 rounded-lg">
+          <div key={category.id} className="w-[94%] md:h-full h-[216px] border border-[#CED4DA] flex flex-col md:items-start items-center md:gap-6 gap-5 md:p-11 p-6 rounded-lg">
             <div className="flex flex-row gap-6 items-center">
               <img
                 src={category.image}
@@ -55,7 +55,7 @@ const Categories = () => {
                 {category.title}
               </h3>
             </div>
-            <p className="text-center font-poppins font-light md:text-lg text-xs text-black">
+            <p className="text-center md:text-justify font-poppins font-light md:text-lg text-xs leading-5 text-black">
               {category.desc}
             </p>
             <button className="font-poppins font-semibold md:text-sm text-xs transition-all ease-linear duration-200 text-[#8064A2] hover:bg-[#8064A2]  hover:text-white border border-[#8064A2] md:h-10 h-8 md:w-32 w-full rounded-lg">
