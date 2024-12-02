@@ -41,24 +41,24 @@ const Categories = () => {
   ];
 
   return (
-    <div className="w-full h-[51.125rem] bg-white grid place-items-center">
-      <div className="md:w-[86%] w-full h-[75%] grid md:grid-cols-2 place-items-center grid-cols-1 gap-6">
+    <div className="w-full min-h-[51.125rem] h-max bg-white grid place-items-center md:py-1 py-8">
+      <div className="md:w-[86%] w-full min-h-[75%] h-max grid md:grid-cols-2 place-items-center grid-cols-1 gap-6">
         {categores.map((category) => (
-          <div className="w-[94%] h-full border border-[#CED4DA] flex flex-col gap-6 p-11 rounded-lg">
+          <div className="w-[94%] md:h-full h-[216px] border border-[#CED4DA] flex flex-col md:items-start items-center md:gap-6 gap-5 md:p-11 p-6 rounded-lg">
             <div className="flex flex-row gap-6 items-center">
               <img
                 src={category.image}
                 alt={category.title}
-                className="w-10 h-10 object-contain"
+                className="md:w-10 w-8 md:h-10 h-8 object-contain"
               />
-              <h3 className="font-poppins font-semibold text-2xl text-black">
+              <h3 className="font-poppins font-semibold md:text-2xl text-lg text-black">
                 {category.title}
               </h3>
             </div>
-            <p className="font-poppins font-light text-lg text-black">
+            <p className="text-center font-poppins font-light md:text-lg text-xs text-black">
               {category.desc}
             </p>
-            <button className="font-poppins font-semibold text-sm transition-all ease-linear duration-200 text-[#8064A2] hover:bg-[#8064A2]  hover:text-white border border-[#8064A2] h-10 w-32 rounded-lg">
+            <button className="font-poppins font-semibold md:text-sm text-xs transition-all ease-linear duration-200 text-[#8064A2] hover:bg-[#8064A2]  hover:text-white border border-[#8064A2] md:h-10 h-8 md:w-32 w-full rounded-lg">
               {category.action}
             </button>
           </div>
