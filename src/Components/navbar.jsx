@@ -1,3 +1,4 @@
+// src/Components/navbar.jsx
 import React from 'react';
 import { Search, ChevronDown, Bell, ShoppingCart } from 'lucide-react';
 
@@ -8,7 +9,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="flex items-center gap-3">
           <img 
-            src="/images/hobbycue-logo.png" 
+            src="/public/images/logo.png" 
             alt="Hobbycue Logo" 
             className="h-16 object-contain"
           />
