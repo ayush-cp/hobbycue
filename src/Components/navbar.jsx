@@ -3,7 +3,8 @@ import { Search, ChevronDown,Menu, X } from "lucide-react";
 import { FaCompass } from "react-icons/fa6";
 import { FaBookmark } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
-import { FaBell } from "react-icons/fa";
+import { FaBell } from "react-icons/fa";import { Link } from 'react-router';
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -27,11 +28,12 @@ const Navbar = () => {
       <nav className="max-w-7xl mx-auto px-4 py-3">
         <div className="flex justify-center items-center">
           <div className="flex items-center gap-3">
-            <img
-              src="/images/logo.png"
-              alt="Hobbycue Logo"
+            <Link to="/"><img 
+              src="/images/logo.png" 
+              alt="Hobbycue Logo" 
               className="h-12 md:h-16 object-contain"
-            />
+            /></Link>
+            
           </div>
 
           <button

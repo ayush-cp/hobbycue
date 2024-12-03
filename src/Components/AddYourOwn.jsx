@@ -1,5 +1,6 @@
 import React from 'react';
 import { Plus } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AddYourOwnSection = () => {
   return (
@@ -15,7 +16,7 @@ const AddYourOwnSection = () => {
           Are you a teacher or expert? Do you sell or rent out equipment, venue or event tickets? Or, you know someone who should be on hobbycue? Go ahead and Add your Own page
         </p>
         <button className="px-4 md:px-6 py-2 text-purple-600 border border-purple-600 rounded-lg hover:bg-purple-50 transition">
-          Add new
+         <Link to="/addNew">Add new</Link> 
         </button>
       </div>
     </div>
