@@ -1,7 +1,6 @@
 import React from 'react'
 import Hero from './Hero'
 import Navbar from './navbar'
-import Footer from './footer'
 import Categories from './Categories'
 
 const Home = () => {
@@ -10,7 +9,7 @@ const Home = () => {
         <Navbar/>
         <Hero/>
         <Categories/>
-        <Footer/>
+       
     </div>
   )
 }

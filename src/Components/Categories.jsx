@@ -2,7 +2,7 @@ import React from "react";
 import people from "/public/images/people.png";
 import product from "/public/images/product.png";
 import program from "/public/images/program.png";
-import place from "/public/images/people.png";
+import place from "/public/images/place.png";
 
 const Categories = () => {
   const categores = [
