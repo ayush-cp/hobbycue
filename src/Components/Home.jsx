@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./Hero";
 import AddYourOwnSection from "./AddYourOwn";
 import Categories from "./Categories";
+import HobbyAndCommunity from "./HobbyAndCommunity";
 import TestimonialSection from "./testimonials";
 import HobbyAndCommunity from "./HobbyAndCommunity";
 const Home = () => {
