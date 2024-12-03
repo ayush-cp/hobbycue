@@ -1,9 +1,24 @@
-// src/Components/navbar.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, ChevronDown, Bell, ShoppingCart, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  // Close the dropdown when clicking outside
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (!event.target.closest('.dropdown-group')) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, []);
 
   return (
     <div className="border-b border-gray-100 shadow-sm fixed w-full bg-white z-[100]">
@@ -13,7 +28,7 @@ const Navbar = () => {
           {/* Logo Section */}
           <div className="flex items-center gap-3">
             <img 
-              src="/public/images/logo.png" 
+              src="/images/logo.png" 
               alt="Hobbycue Logo" 
               className="h-12 md:h-16 object-contain"
             />
@@ -45,11 +60,30 @@ const Navbar = () => {
 
             {/* Navigation Links */}
             <div className="flex items-center gap-4">
-              <button className="flex items-center gap-1 text-gray-700 hover:text-purple-600">
-                <Search size={20} />
-                <span>Explore</span>
-                <ChevronDown size={16} />
-              </button>
+              {/* Explore Section with Clickable Dropdown */}
+              <div className="relative dropdown-group">
+                <button 
+                  className="flex items-center gap-1 text-gray-700 hover:text-purple-600"
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                >
+                  <Search size={20} />
+                  <span>Explore</span>
+                  <ChevronDown size={16} />
+                </button>
+
+                {/* Dropdown Menu */}
+                {isDropdownOpen && (
+                  <div className="absolute top-10 left-0 w-64 bg-white border border-gray-200 shadow-md rounded-lg">
+                    <ul className="divide-y divide-gray-100">
+                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">People - Community</li>
+                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Places - Venues</li>
+                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Programs - Events</li>
+                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Products - Store</li>
+                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Blogs</li>
+                    </ul>
+                  </div>
+                )}
+              </div>
 
               <button className="flex items-center gap-1 text-gray-700 hover:text-purple-600">
                 <span className="text-purple-600">✚</span>
