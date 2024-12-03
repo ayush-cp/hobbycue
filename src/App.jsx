@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import Home from "./Components/Home";
+import Footer from "./Components/footer";
+import Navbar from "./Components/navbar";
+import React from "react";
+function App() {
+  return (
+    <div className="w-full min-h-screen h-max bg-white-400">
+      <Navbar />
+      <Home />
+      <Footer />
+=======
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home'
 import Footer from './Components/footer';
@@ -15,8 +27,9 @@ function App() {
         </Routes>
         <Footer/>
       </BrowserRouter>
+>>>>>>> developer
     </div>
-  )
+  );
 }
 
 export default App;
