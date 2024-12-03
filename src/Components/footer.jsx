@@ -15,10 +15,10 @@ const Footer = () => {
   const [email, setEmail] = useState("");
 
   return (
-    <footer className="bg-white mt-8 w-full px-4 py-8 ">
+    <footer className="bg-white mt-8 w-full px-4 py-8">
       <div className="md:max-w-7xl md:mx-auto ">
-        <div className="flex md:flex-row justify-between gap-8 py-8 flex-col">
-          <div className="w-full sm:w-[200px]">
+        <div className="w-full flex md:flex-row justify-between py-8 flex-col">
+          <div className="w-full sm:w-24">
             <div className="flex justify-between">
               <h3 className="font-bold text-lg mb-4">Hobbycue</h3>
               <FaAngleUp className="md:hidden block mt-1" />
@@ -59,7 +59,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-full sm:w-[200px]">
+          <div className="w-full sm:w-24">
             <div className="flex justify-between">
               <h3 className="font-bold text-lg mb-4">How Do I</h3>
               <FaAngleUp className="md:hidden block mt-1" />
@@ -100,7 +100,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-full sm:w-[200px]">
+          <div className="w-full sm:w-24">
             <div className="flex justify-between">
               <h3 className="font-bold text-lg mb-4">Quick Links</h3>
               <FaAngleUp className="md:hidden block mt-1" />
@@ -142,7 +142,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-5">
-            <div className="w-full sm:w-[200px]">
+            <div className="w-full sm:w-54">
               <h3 className="font-bold text-lg mb-4">Social Media</h3>
               <div className="flex space-x-4 text-purple-600">
                 <div className="w-[30px]  p-1 flex justify-center items-center rounded-full h-[30px] bg-gray-200">
@@ -172,7 +172,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-full sm:w-[200px]">
+            <div className="w-full sm:w-48">
               <h3 className="font-bold text-lg mb-4">Invite Friends</h3>
               <form
                 className="relative flex md:w-[160%] w-[100%] rounded-lg"
