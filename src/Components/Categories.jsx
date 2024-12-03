@@ -41,10 +41,13 @@ const Categories = () => {
   ];
 
   return (
-    <div className="w-full min-h-[51.125rem] h-max bg-white grid place-items-center md:py-1 py-8">
+    <div className="w-full mt-[10vh] bg-white grid place-items-center ">
       <div className="md:w-[86%] w-full min-h-[75%] h-max grid md:grid-cols-2 place-items-center grid-cols-1 gap-6">
         {categores.map((category) => (
-          <div key={category.id} className="w-[94%] md:h-full h-[216px] border border-[#CED4DA] flex flex-col md:items-start items-center md:gap-6 gap-5 md:p-11 p-6 rounded-lg">
+          <div
+            key={category.id}
+            className="w-[94%] md:h-full h-[216px] border border-[#CED4DA] flex flex-col md:items-start items-center md:gap-6 gap-5 md:p-11 p-6 rounded-lg"
+          >
             <div className="flex flex-row gap-6 items-center">
               <img
                 src={category.image}
