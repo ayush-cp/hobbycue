@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, ChevronDown, Bell, ShoppingCart, Menu, X } from 'lucide-react';
+import { Link } from 'react-router';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,12 +27,14 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="flex items-center justify-between">
           {/* Logo Section */}
+
           <div className="flex items-center gap-3">
-            <img 
+            <Link to="/"><img 
               src="/images/logo.png" 
               alt="Hobbycue Logo" 
               className="h-12 md:h-16 object-contain"
-            />
+            /></Link>
+            
           </div>
 
           {/* Mobile Menu Button */}
