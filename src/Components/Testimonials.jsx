@@ -5,7 +5,7 @@ const TestimonialSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="bg-[#F7F5F9] max-w-[1240px] mx-auto mt-8 mb-16 px-4 sm:px-8 md:px-16 lg:px-24 rounded-lg py-8">
+    <div className="bg-[#F7F5F9] max-w-[1240px] mx-auto mt-2 md:mt-8 mb-2 md:mb-16 px-4 sm:px-8 md:px-16 lg:px-24 rounded-lg py-8">
       <div className="flex items-center gap-3 mb-6">
         <span className="text-4xl sm:text-5xl md:text-6xl text-purple-500 font-serif">&quot;</span>
         <h2 className="text-lg md:text-xl font-bold text-gray-900">Testimonials</h2>
