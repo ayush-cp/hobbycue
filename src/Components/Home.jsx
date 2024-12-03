@@ -8,7 +8,8 @@ const Home = () => {
     <div className='w-full h-full flex flex-col gap-4'>
         <Navbar/>
         <Hero/>
-       <Categories/>
+        <Categories/>
+       
     </div>
   )
 }

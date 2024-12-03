@@ -2,7 +2,7 @@ import React from "react";
 import people from "/public/images/people.png";
 import product from "/public/images/product.png";
 import program from "/public/images/program.png";
-import place from "/public/images/people.png";
+import place from "/public/images/place.png";
 
 const Categories = () => {
   const categores = [
@@ -55,7 +55,7 @@ const Categories = () => {
                 {category.title}
               </h3>
             </div>
-            <p className="text-center font-poppins font-light md:text-lg text-xs text-black">
+            <p className="md:text-left text-center font-poppins font-light md:text-lg text-xs text-black">
               {category.desc}
             </p>
             <button className="font-poppins font-semibold md:text-sm text-xs transition-all ease-linear duration-200 text-[#8064A2] hover:bg-[#8064A2]  hover:text-white border border-[#8064A2] md:h-10 h-8 md:w-32 w-full rounded-lg">
