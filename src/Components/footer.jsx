@@ -15,7 +15,7 @@ const Footer = () => {
   const [email, setEmail] = useState("");
 
   return (
-    <footer className="bg-white mt-8 w-full px-4 py-8">
+    <footer className="bg-white mt-8 w-full md:px-0 px-4 py-8 pb-0">
       <div className="md:max-w-7xl md:mx-auto ">
         <div className="w-full flex md:flex-row justify-between py-8 flex-col">
           <div className="w-full sm:w-24">
@@ -197,8 +197,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mt-5 flex justify-center items-center">
-        <div className="bg-[#F7F5F9] font-[500] text-md text-center text-[#08090A]">
+      <div className=" flex justify-center items-center">
+        <div className="bg-[#F7F5F9] flex justify-center items-center w-full md:h-20 h-10 font-[500] text-md text-center text-[#08090A]">
           © Purple Cues Private Limited
         </div>
       </div>
