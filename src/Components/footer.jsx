@@ -1,76 +1,205 @@
-import React, { useState } from 'react';
-import { Mail, Send } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  FaTwitter,
+  FaInstagram,
+  FaPinterest,
+  FaGooglePlusG,
+  FaYoutube,
+  FaTelegramPlane,
+} from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaAngleUp } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   return (
-    <footer className="bg-gray-50 mt-[60px] w-full px-4 py-8">
-      <div className="border-t border-gray-200 max-w-7xl mx-auto">
-        <div className="flex flex-wrap gap-8 justify-between py-8">
-          {/* Hobbycue Section */}
+    <footer className="bg-white mt-8 w-full px-4 py-8 ">
+      <div className="md:max-w-7xl md:mx-auto ">
+        <div className="flex md:flex-row justify-between gap-8 py-8 flex-col">
           <div className="w-full sm:w-[200px]">
-            <h3 className="font-bold text-lg mb-4">Hobbycue</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">About Us</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Our Services</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Work with Us</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">FAQ</a></li>
-            </ul>
-          </div>
-
-          {/* How Do I Section */}
-          <div className="w-full sm:w-[200px]">
-            <h3 className="font-bold text-lg mb-4">How Do I</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Sign Up</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Add a Listing</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Claim Listing</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Post a Query</a></li>
-            </ul>
-          </div>
-
-          {/* Quick Links Section */}
-          <div className="w-full sm:w-[200px]">
-            <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Listings</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Blog Posts</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Shop / Store</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Community</a></li>
-            </ul>
-          </div>
-
-          {/* Social Media Section */}
-          <div className="w-full sm:w-[200px]">
-            <h3 className="font-bold text-lg mb-4">Social Media</h3>
-            <div className="flex gap-2 mb-6">
-              <a href="#" aria-label="Facebook" className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-purple-100">f</a>
-              <a href="#" aria-label="Twitter" className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-purple-100">t</a>
-              <a href="#" aria-label="LinkedIn" className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-purple-100">in</a>
-              <a href="#" aria-label="Email" className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-purple-100">
-                <Mail size={16} />
-              </a>
+            <div className="flex justify-between">
+              <h3 className="font-bold text-lg mb-4">Hobbycue</h3>
+              <FaAngleUp className="md:hidden block mt-1" />
             </div>
-            
-            {/* Invite Friends Section */}
-            <div>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  Our Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  Work with Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="w-full sm:w-[200px]">
+            <div className="flex justify-between">
+              <h3 className="font-bold text-lg mb-4">How Do I</h3>
+              <FaAngleUp className="md:hidden block mt-1" />
+            </div>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  Sign Up
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  Add a Listing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  Claim Listing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  Post a Query
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="w-full sm:w-[200px]">
+            <div className="flex justify-between">
+              <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+              <FaAngleUp className="md:hidden block mt-1" />
+            </div>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  Listings
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  Blog Posts
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  Shop / Store
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-400 md:text-black font-[400] hover:text-purple-600"
+                >
+                  Community
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <div className="w-full sm:w-[200px]">
+              <h3 className="font-bold text-lg mb-4">Social Media</h3>
+              <div className="flex space-x-4 text-purple-600">
+                <div className="w-[30px]  p-1 flex justify-center items-center rounded-full h-[30px] bg-gray-200">
+                  <FaFacebookF className="text-[#6D747A]   hover:text-purple-700" />
+                </div>
+                <div className="w-[30px] p-1 flex justify-center items-center rounded-full h-[30px] bg-gray-200">
+                  <FaTwitter className="text-[#6D747A]   hover:text-purple-700" />
+                </div>
+                <div className="w-[30px] p-1 flex justify-center items-center rounded-full h-[30px] bg-gray-200">
+                  <FaInstagram className="text-[#6D747A]   hover:text-purple-700" />
+                </div>
+                <div className="w-[30px] p-1 flex justify-center items-center rounded-full h-[30px] bg-gray-200">
+                  <FaPinterest className="text-[#6D747A]   hover:text-purple-700" />
+                </div>
+                <div className="w-[30px] p-1 flex justify-center items-center rounded-full h-[30px] bg-gray-200">
+                  <FaGooglePlusG className="text-[#6D747A]   hover:text-purple-700" />
+                </div>
+                <div className="w-[30px] p-1 flex justify-center items-center rounded-full h-[30px] bg-gray-200">
+                  <FaYoutube className="text-[#6D747A]   hover:text-purple-700" />
+                </div>
+                <div className="w-[30px] p-1 flex justify-center items-center rounded-full h-[30px] bg-gray-200">
+                  <FaTelegramPlane className="text-[#6D747A]   hover:text-purple-700" />
+                </div>
+                <div className="w-[30px] p-1 flex justify-center items-center rounded-full h-[30px] bg-gray-200">
+                  <IoMdMail className="text-[#6D747A]   hover:text-purple-700" />
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full sm:w-[200px]">
               <h3 className="font-bold text-lg mb-4">Invite Friends</h3>
-              <form className="relative">
+              <form
+                className="relative flex md:w-[160%] w-[100%] rounded-lg"
+                style={{ border: "1px solid #8064A2" }}
+              >
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email ID"
-                  className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:border-purple-500"
+                  className="w-full pl-3 pr-0 py-1 rounded-lg focus:outline-none focus:border-purple-500"
                   required
                 />
-                <button type="submit" className="absolute right-2 top-1/2 transform -translate-y-1/2 text-purple-600 hover:text-purple-700">
-                  <Send size={16} />
+                <button
+                  type="submit"
+                  className="bg-[#8064A2] text-white px-3 py-1 rounded-r-lg  hover:bg-purple-700"
+                >
+                  Invite
                 </button>
               </form>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="mt-5 flex justify-center items-center">
+        <div className="bg-[#F7F5F9] font-[500] text-md text-center text-[#08090A]">
+          © Purple Cues Private Limited
         </div>
       </div>
     </footer>
