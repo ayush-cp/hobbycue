@@ -15,9 +15,12 @@ const HobbyAndCommunity = () => {
       </div>
       <div className="flex justify-end">
         <div className="hidden md:flex flex-col gap-1 justify-center items-center mr-3">
-          <div className="cursor-pointer rounded-full text-center h-[40px] w-[40px] bg-[#FFFFFF] shadow-md flex justify-center items-center">
+          <a
+            href="#hero"
+            className="cursor-pointer rounded-full text-center h-[40px] w-[40px] bg-[#FFFFFF] shadow-md flex justify-center items-center"
+          >
             <ChevronUp className="text-[#939CA3]" />
-          </div>
+          </a>
           <p
             style={{ boxShadow: "0px 0px 5px 0px #78787824" }}
             className="bg-[#FFFFFF] text-[#8064A2] text-[10px] p-1 font-medium"
@@ -36,5 +39,4 @@ const HobbyAndCommunity = () => {
     </div>
   );
 };
-
 export default HobbyAndCommunity;

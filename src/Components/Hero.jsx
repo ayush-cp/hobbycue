@@ -58,7 +58,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full md:min-h-[87vh] md:h-max min-h-screen h-max flex py-36 justify-center bg-[#F7F5F9]">
+    <div  id="hero"  className="relative w-full md:min-h-[87vh] md:h-max min-h-screen h-max flex py-36 justify-center bg-[#F7F5F9]">
       <div className="md:w-[45%] w-full md:h-max h-[20vh] absolute bottom-0 md:left-20 left-0 flex flex-row items-end z-0">
         {/* <div className="w-1/2 md:min-w-[250px] h-full"> */}
           <img
