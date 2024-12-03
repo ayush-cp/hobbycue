@@ -4,7 +4,6 @@ import AddYourOwnSection from "./AddYourOwn";
 import Categories from "./Categories";
 import HobbyAndCommunity from "./HobbyAndCommunity";
 import TestimonialSection from "./testimonials";
-import HobbyAndCommunity from "./HobbyAndCommunity";
 const Home = () => {
   return (
     <div className="w-full h-full flex flex-col gap-4">

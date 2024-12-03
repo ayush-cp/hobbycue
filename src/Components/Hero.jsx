@@ -6,6 +6,8 @@ import facebook from "/public/images/facebook.png";
 import openEye from "/public/images/openEye.png";
 import closeEye from "/public/images/closeEye.png";
 import lock from "/public/images/lock.png";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Hero = () => {
   const [page, setPage] = useState("signIn");
@@ -18,12 +20,12 @@ const Hero = () => {
   const intersectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           setVisible(true);
-          console.log("visible");
         }
       },
       {
@@ -96,7 +98,7 @@ const Hero = () => {
   const handleSignIn = (e)=>{
     e.preventDefault();
     if (!email || !password) {
-      console.log("Fill all the fields.")
+      toast.warning("Fill all the fields.")
     }
     try {
       const data = {
@@ -104,17 +106,18 @@ const Hero = () => {
         password
       }
     } catch (error) {
+      toast.error('an error occured while signing in')
       console.log(error)
     }
   }
   const handleJoinIn = (e)=>{
     e.preventDefault();
     if (!email || !password) {
-      console.log("Fill all the fields.")
+      toast.warning("Fill all the fields.")
       return;
     }
     if (passwordScore<7) {
-      console.log("Please use a stronger password")
+      toast.warning("Please use a stronger password")
       return;
     }
     try {
@@ -123,12 +126,14 @@ const Hero = () => {
         password
       }
     } catch (error) {
+      toast.error('an error occured while joining in')
       console.log(error)
     }
   }
 
   return (
     <div  id="hero"  className="relative w-full md:min-h-[87vh] md:h-max min-h-screen h-max flex py-36 justify-center bg-[#F7F5F9]">
+      <ToastContainer/>
       <div
         ref={intersectionRef}
         className={`md:w-[45%] w-full md:h-max h-[20vh] absolute bottom-0 transition-all ease-linear duration-700 ${
@@ -137,20 +142,17 @@ const Hero = () => {
             : "opacity-0 blur-lg md:left-[-5%] left-[-20%]"
         } flex flex-row items-end z-0`}
       >
-        {/* <div className="w-1/2 md:min-w-[250px] h-full"> */}
         <img
           src={bgimage1}
           alt="hero image"
           className="w-1/2 md:min-w-[250px] h-full object-contain object-bottom"
         />
-        {/* </div> */}
-        {/* <div className="w-1/2 md:min-w-[250px] h-full "> */}
+       
         <img
           src={bgimage2}
           alt="hero image"
           className="w-1/2 md:min-w-[250px] h-full object-contain object-bottom"
         />
-        {/* </div> */}
       </div>
       <div className="relative z-10 w-[90%] md:h-[75%] h-full md:gap-0 gap-8 flex md:flex-row flex-col items-start justify-around">
         <div className="md:w-1/2 w-full h-max flex flex-col  md:gap-8 gap-4">
