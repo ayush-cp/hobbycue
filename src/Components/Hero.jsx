@@ -58,7 +58,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full md:min-h-[87vh] md:h-max min-h-screen h-max flex py-28 justify-center bg-[#F7F5F9]">
+    <div className="relative w-full md:min-h-[87vh] md:h-max min-h-screen h-max flex py-36 justify-center bg-[#F7F5F9]">
       <div className="md:w-[45%] w-full md:h-max h-[20vh] absolute bottom-0 md:left-20 left-0 flex flex-row items-end z-0">
         {/* <div className="w-1/2 md:min-w-[250px] h-full"> */}
           <img
@@ -100,8 +100,8 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="md:w-1/2 w-full h-full flex justify-center">
-          <div className="w-[55%] min-w-[300px] h-max">
+        <div className="md:w-[42%] w-full h-full flex justify-center">
+          <div className="w-[68%] min-w-[300px] h-max">
             <div className="w-full flex flex-row gap-4">
               <h3
                 onClick={() => setPage("signIn")}
@@ -142,11 +142,11 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="w-full flex items-center gap-2">
-                  <hr class="flex-grow border-t-2 border-[#CED4DA]" />
-                  <span class=" text-black text-xs font-semibold">
+                  <hr className="flex-grow border-t-2 border-[#CED4DA]" />
+                  <span className=" text-black text-xs font-semibold">
                     Or Connect With
                   </span>
-                  <hr class="flex-grow border-t-2 border-[#CED4DA]" />
+                  <hr className="flex-grow border-t-2 border-[#CED4DA]" />
                 </div>
 
                 <form className="w-full h-max flex flex-col gap-6">
@@ -213,11 +213,11 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="w-full flex items-center gap-2">
-                  <hr class="flex-grow border-t-2 border-[#CED4DA]" />
-                  <span class=" text-black text-xs font-semibold">
+                  <hr className="flex-grow border-t-2 border-[#CED4DA]" />
+                  <span className=" text-black text-xs font-semibold">
                     Or Connect With
                   </span>
-                  <hr class="flex-grow border-t-2 border-[#CED4DA]" />
+                  <hr className="flex-grow border-t-2 border-[#CED4DA]" />
                 </div>
 
                 <form className="w-full h-max flex flex-col gap-6">
