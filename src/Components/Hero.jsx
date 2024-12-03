@@ -76,7 +76,7 @@ const Hero = () => {
         {/* </div> */}
       </div>
       <div className="relative z-10 w-[90%] md:h-[75%] h-full md:gap-0 gap-8 flex md:flex-row flex-col items-start justify-around">
-        <div className="md:w-1/2 w-full h-max flex flex-col  md:gap-8 gap-2" >
+        <div className="md:w-1/2 w-full h-max flex flex-col  md:gap-8 gap-4" >
           <h1 className="font-poppins italic font-semibold md:text-4xl sm:text-2xl text-lg text-black">
             Explore your <span className="text-[#0096C8]">hobby</span> or{" "}
             <span className="text-[#8064A2]">passion</span>{" "}
